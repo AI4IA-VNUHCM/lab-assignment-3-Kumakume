@@ -26,10 +26,10 @@ int Ex4(int arr[], int n){
             return -1;   
         }
 	}*/
-	if (arr[i] <= arr[i + 1] && arr[n - 2] <= arr[n - 1])
+	if (arr[i] <= arr[i + 1])
         return 1;
  
-    else if (arr[i] >= arr[i + 1] && arr[n - 2] >= arr[n - 1])
+    else if (arr[i] >= arr[i + 1])
         return -1;
 }
 
