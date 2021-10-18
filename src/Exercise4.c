@@ -14,13 +14,7 @@ ______________________________________
 
 int Ex4(int arr[], int n){
 	//Your codes here
-	if (n == 1 || n == 0) 
-        return 1; 
-  
-    if (arr[n - 1] < arr[n - 2]) 
-        return -1; 
-    return Ex4(arr, n - 1);
-	/*int a = 1, d = 1, i;
+	int a = 1, d = 1, i;
 	while ((a == 1 || d == 1) && i < n - 1) 
 	{
     if (arr[i] < arr[i+1])
@@ -34,7 +28,7 @@ int Ex4(int arr[], int n){
     else if (d == 1)
         return -1;
     else
-        return 0;*/
+        return 0;
 }
 
 int main(int argc, char *argv[]) {
