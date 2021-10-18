@@ -14,8 +14,8 @@ ______________________________________
 
 int Ex4(int arr[], int n){
 	//Your codes here
-	int i;
-    /*for(i = 0; i < n - 1; i ++);
+	/*int i;
+    for(i = 0; i < n - 1; i ++);
 	{
         if (arr[i] < arr[i+1]) 
 		{
@@ -26,11 +26,21 @@ int Ex4(int arr[], int n){
             return -1;   
         }
 	}*/
-	if (arr[i] <= arr[i + 1])
-        return 1;
- 
-    else if (arr[i] >= arr[i + 1])
-        return -1;
+	int a = 1, d = 1, i;
+	while ((a == 1 || d == 1) && i < n - 1) {
+    if (arr[i] < arr[i+1])
+      d = 0;
+    else if (arr[i] > arr[i+1])
+      a = 0;
+    i++;
+  }
+
+  if (a == 1)
+    return 1;
+  else if (d == 1)
+    return -1;
+  else
+    return 0;
 }
 
 int main(int argc, char *argv[]) {
