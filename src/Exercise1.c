@@ -19,11 +19,16 @@ void Ex1(int arr[], int n)
 	int sym = 1;
 	for(i=0,j=n-1;(i<=floor((n-1)/2))&&(j>=ceil((n-1)/2));i++,j--)
 	{
-		if(sym==0)
+		if(sym!=0)
+		{
 		    printf("asymmetric");
-		else    
+		    break;
+		}
+		else 
+		{   
 		    printf("symmetric");
-		break;
+		    break;
+		}
 	}
 }
 
