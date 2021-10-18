@@ -20,7 +20,7 @@ void Ex1(int arr[], int n)
     {
         for(j=0;j<n;j++)
         {
-            if(arr[i] == arr[j] && arr[j]== arr[i])
+            if(arr[i] == arr[j])
             {
                 printf("(%d)\t",arr[i]);
                 continue;
