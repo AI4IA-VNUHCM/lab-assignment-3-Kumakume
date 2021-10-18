@@ -28,7 +28,7 @@ int Ex4(int arr[], int n){
 	}*/
 	if (n == 1 || n == 0) 
         return 1; 
-    if (arr[n - 1] < arr[n - 2]) 
+    else
         return -1; 
     return Ex4(arr, n - 1);
 }
