@@ -12,9 +12,21 @@ Ex:
 #include <stdlib.h>
 #include <math.h>
 
-void Ex1(int arr[], int n){
+void Ex1(int arr[], int n)
+{
 	//Your codes here
-    
+    int i,j;
+    for(i=0;i<n;i++)
+    {
+        for(j=0;j<n;j++)
+        {
+            if(arr[i] == arr[j] && arr[j]== arr[i])
+            {
+                printf("(%d)\t",arr[i]);
+                continue;
+            }
+        }
+    }
 }
 
 int main(int argc, char *argv[]) {
