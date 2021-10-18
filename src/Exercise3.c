@@ -14,8 +14,57 @@ Ex:
 
 void Ex3(int in_arr[], int n){
 	//Your codes here
-	
+	int max1 = 1, len1 = 1, lc;
+	for (int i = 1; i < n - 1; i++)
+	{
+		if (in_arr[i] > in_arr[i - 1])
+			len1++;
+		else
+		{
+			if (max1 < len1)
+			{
+				max1 = len1;
+			}
+			len1 = 1;
+		}
+		if (max1 < len1)
+		{
+			max1 = len1;
+			lc = i;
+		}
+	}
+	printf(" Increasing");
+	for (int i = lc - max1 + 1; i < lc + 1; i++)
+	{
+		printf(" %d", in_arr[i]);
+	}
+	int lc2;
+	int max2 = 1, len2 = 1;
+	for (int i = 1; i < n - 1; i++)
+	{
+		if (in_arr[i] > in_arr[i + 1])
+			len2++;
+		else
+		{
+			if (max2 < len2)
+			{
+				max2 = len2;
+			}
+			len2 = 1;
+		}
+		if (max2 < len2)
+		{
+			max2 = len2;
+			lc2 = i + 1;
+		}
+	}
+	printf(" Decreasing");
+	for (int i = lc2 - max2 + 1; i <= lc2; i++)
+	{
+		printf(" %d", in_arr[i]);
+	}
 }
+
 
 int main(int argc, char *argv[]) {
 	//testing variable, applying it to your algorithm for auto-evaluating
