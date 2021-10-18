@@ -14,18 +14,12 @@ ______________________________________
 
 int Ex4(int arr[], int n){
 	//Your codes here
-	int i;
-    for(i = 0; i < n - 1; i ++);
-	{
-        if (arr[i] < arr[i+1]) 
-		{
-            return 1;
-        } 
-		else
-		{
-            return -1;   
-        }
-	}
+	if (n == 1 || n == 0) 
+        return 1; 
+  
+    if (arr[n - 1] < arr[n - 2]) 
+        return -1; 
+    return Ex4(arr, n - 1);
 	/*int a = 1, d = 1, i;
 	while ((a == 1 || d == 1) && i < n - 1) 
 	{
